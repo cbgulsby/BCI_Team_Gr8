@@ -1,6 +1,6 @@
 import React from "react"
 
-function music_player() {
+function MusicPlayer() {
     return(
         <div>
             <h1>I made something appear</h1>
@@ -8,4 +8,4 @@ function music_player() {
     );
 }
 
-export default music_player
+export default MusicPlayer
