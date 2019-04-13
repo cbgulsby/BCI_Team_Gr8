@@ -1,0 +1,32 @@
+.header-background {
+    font-size: 50px;
+    height: 200px;
+    opacity: 0.5;
+    background-image: url(http://wallpapers.ae/wp-content/uploads/2015/02/Road-Twitter-Header-Cover-HD-Photo.jpg);
+    background-repeat: round;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  .app-body {
+    height: 100%;
+  }
+
+  .normal {
+    background-color: white;
+  }
+  
+  .not-normal {
+    background-color: lightcoral;
+  }
+  
+  .header-text {
+    opacity: 1;
+    color:white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;  
+  }
