@@ -16,6 +16,7 @@ function App() {
       </div>
       <div className={ stressLevelNormal ? 'normal' + ' app-body' : 'not-normal' + ' app-body'}>
         <h2>Start playing to see some magic happen!</h2>
+        <img src={'http://integrativecancer.org/wp-content/uploads/Yerkes-Dodson-curve-1024x600.png'}/>
       </div>
     </div>
   );
