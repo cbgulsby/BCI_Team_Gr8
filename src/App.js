@@ -4,6 +4,7 @@ import { Line, Bar } from "react-chartjs-2";
 
 import "./styles.css";
 import "./stylesheets/index.css";
+import "./components/music_player";
 
 var stressLevelNormal = true;
 
