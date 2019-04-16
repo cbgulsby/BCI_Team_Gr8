@@ -1,11 +1,10 @@
 import React from "react";
 
-import { Line, Bar } from "react-chartjs-2";
-
 import "./styles.css";
-import "./stylesheets/index.css";
-import "./components/music_player";
+import "./stylesheets/index.styles.css";
 
+import MusicPlayer from "./components/MusicPlayer";
+import YerkesDodsonInfo from "./components/YerkesDodsonInfo";
 var stressLevelNormal = true;
 
 function App() {
@@ -16,6 +15,8 @@ function App() {
       </div>
       <div className={ stressLevelNormal ? 'normal' + ' app-body' : 'not-normal' + ' app-body'}>
         <h2>Start playing to see some magic happen!</h2>
+        <YerkesDodsonInfo/>
+        <MusicPlayer/>
       </div>
     </div>
   );
