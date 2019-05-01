@@ -1,24 +1,17 @@
 import React, {Component} from 'react';
 // import Sound from 'react-sound';
 
-class MusicPlayer extends Component 
+function MusicPlayer ()
 {
-    state =
-    {
-        
-    }
-
-    render()
-    {
-        return ( 
+    return 
+    (
         <div>
-            <audio id = 'myAudio'>
-                <source src='./src/assets/Hedwigs Theme.mp3' type='audio/mp3'></source>
+            <audio>
+                <source src="../assets/Hedwigs Theme.mp3" type="audio/mp3"></source>
+                <source
             </audio>
-            <button onClick='playAudio()' type='button'>Play Audio</button>
         </div>
-        );
-    }
+    )
 }
 
 export default MusicPlayer;
