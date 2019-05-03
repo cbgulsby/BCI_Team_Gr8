@@ -1,17 +1,60 @@
-import React, {Component} from 'react';
-// import Sound from 'react-sound';
+import React from 'react';
+import sound1 from "../assets/harryPotter.mp3";
+import sound2 from "../assets/starWars.mp3";
+import "../stylesheets/MusicPlayer.styles.css";
 
-function MusicPlayer ()
-{
-    return 
-    (
-        <div>
-            <audio>
-                <source src="../assets/Hedwigs Theme.mp3" type="audio/mp3"></source>
-                <source
-            </audio>
-        </div>
-    )
+let song;
+
+class MusicPlayer extends React.Component {
+    
+    song = "sound1";
+    
+    changeSong()
+    {
+        console.log("here");
+        if(song === "sound1") 
+        {
+            console.log("something");
+            song = "sound2";
+        }
+        else
+        {
+            console.log("other thing");
+            song = "sound1";
+        }
+    }
+
+    render() {
+        return (
+            <div className="MusicPlayer">
+                <button onClick={this.changeSong}>ACTIVATE</button>
+                <br/>
+                <br/>
+                <audio id="myAudio" controls className={song === "sound1" ? "" : "hidden"}>
+                    <source src={sound1} type="audio/mp3" />
+                </audio>
+                <audio id="myAudio2" controls className={song === "sound2" ? "" : "hidden"}>
+                    <source src={sound2} type="audio/mp3" />
+                </audio>
+            </div>
+        );
+    }
 }
+
+
+
+// function MusicPlayer ()
+// {
+//     return (
+//         <div className="MusicPlayer">
+//             <audio id="myAudio" controls>
+//                 <source src={sound1} type="audio/mp3" />
+//                 <source src={sound2} type="audio/mp3" />
+//             </audio>
+
+//             {/* <button onClick={}></button> */}
+//         </div>
+//     );
+// }
 
 export default MusicPlayer;

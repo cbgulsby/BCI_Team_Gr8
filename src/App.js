@@ -4,6 +4,7 @@ import Muse from "./openbci";
 import "./styles.css";
 import "./stylesheets/index.styles.css";
 
+
 import MusicPlayer from "./components/MusicPlayer";
 import YerkesDodsonInfo from "./components/YerkesDodsonInfo";
 var stressLevelNormal = true;
@@ -49,6 +50,10 @@ class App extends Component {
         <h2>{this.state.data}</h2>
         <button onClick={() => Muse.startMuse(this.updateData)}>Connect</button>
         <YerkesDodsonInfo/>
+        {/* <ReactAudioPlayer
+          src={sound}
+          controls
+        /> */}
         <MusicPlayer/>
       </div>
     </div>);
