@@ -7,6 +7,7 @@ import "./stylesheets/index.styles.css";
 import MusicPlayer from "./components/MusicPlayer";
 import YerkesDodsonInfo from "./components/YerkesDodsonInfo";
 var stressLevelNormal = true;
+var elec2, elec3, elec16, elec17 = 0;
 
 class App extends Component {
   constructor(props) {
@@ -35,7 +36,12 @@ class App extends Component {
   updateData = recentData => {
     const newData = recentData;
     this.state.data = newData;
-    console.log(this.state);
+    if (newData[2] != null) elec2 = newData[2][newData[2].length - 1];
+    if (newData[3] != null) elec3 = newData[3][newData[3].length - 1];
+    if (newData[16] != null) elec16 = newData[16][newData[16].length - 1];
+    if (newData[17] != null) elec17 = newData[17][newData[17].length - 1];
+    
+    console.log(elec2, elec3, elec16, elec17);
 
   };
 
